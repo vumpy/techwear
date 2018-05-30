@@ -191,7 +191,7 @@ include('session.php');
   animation: noise-anim-2 3s infinite linear alternate-reverse;
 }
 
-.Welcome > h1{
+.welcome > h1{
 font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 color: white;
 font-size: 100px;
@@ -226,7 +226,23 @@ float: left;
 margin-right: 30px;
 font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
-	</style>
+
+.welcome {
+	height: 260px;
+}
+
+
+.shop {
+	padding: 140px;
+}
+.shop > a{
+color: white;
+text-decoration: none;
+text-align: center;
+font-size: 20px;
+margin-top: 100px;
+}
+</style>
 
 
 </head>
@@ -245,10 +261,15 @@ font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", He
 			    	   echo $_SESSION['username'];
 			    	?>
 			    </h4>
-		    </div>		
-		</div>
-	</div>
-        <?php
+		    </div>
+
+		    <div class = "shop">
+		<a href="shop.php">
+		<h1>
+			Take me to the shop!
+		</h1></a>
+	    </div>		
+		        <?php
             } else {
         ?>
 	        <div class = "log_sign">
@@ -260,8 +281,9 @@ font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", He
 			    	<a href="register.php">Sign Up</a>
 			    </h4>
 		    </div>
+		</div>
 
-		    <div class = "Welcome">
+		    <div class = "welcome">
 		<h1>
 			Welcome To
 		</h1>
@@ -275,15 +297,10 @@ font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", He
             }
     	?>
 
-	</div>
 
-	<div class = "shop">
-		<a href="">
-		<h1>
-			Take me to the shop!
-		</h1></a>
-	</div>
 	
+	
+	</div>
 </div>
 </body>
 </html>
